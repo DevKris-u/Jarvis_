@@ -2,6 +2,6 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-JAVA_CMD="java"
+CLASSPATH="$DIR/gradle/wrapper/gradle-wrapper-shared-8.2.jar"
 
-exec "$JAVA_CMD" -jar "$DIR/gradle/wrapper/gradle-wrapper.jar" "$@"
+exec java -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
